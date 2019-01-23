@@ -13,8 +13,8 @@ modprobe btusb
 # if loading failed, it will mention where the HCF file should have been located
 dmesg | tail
 
-# example of failed output
-# [218656.243156] bluetooth hci0: Direct firmware load for brcm/BCM.hcd failed with error -2
-# [218656.243161] Bluetooth: hci0: BCM: Patch brcm/BCM.hcd not found
-# copy HCF file to the required location (and rename it): /lib/firmware/brcm/BCM.hcd
+# example of failed output:
+#	[218656.243156] bluetooth hci0: Direct firmware load for brcm/BCM.hcd failed with error -2
+#	[218656.243161] Bluetooth: hci0: BCM: Patch brcm/BCM.hcd not found
+# copy the HCD file to the required location (and rename it): /lib/firmware/brcm/BCM.hcd
 # then reload the module again
